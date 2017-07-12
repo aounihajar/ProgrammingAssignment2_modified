@@ -40,4 +40,16 @@ z <- matrix(c(4,2,7,6), 2, 2)
 solve (z)
 
 #testing with caching function
-cacheSolve(makeCacheMatrix (z))
+cacheSolve(makeCacheMatrix (z)) 
+
+#git
+#git clone https://github.com/aounihajar/ProgrammingAssignment2.
+#create a new repo in githib
+#git init
+#git remote add origin https://github.com/aounihajar/ProgrammingAssignment2_modified.git
+#get remote -v
+#git pull origin master --allow-unrelated-histories
+#git add .
+#git commit -m "R Programming, week 3 comment"
+#git push --set-upstream origin master
+
