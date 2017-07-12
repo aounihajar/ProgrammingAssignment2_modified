@@ -42,8 +42,10 @@ solve (z)
 #testing with caching function
 cacheSolve(makeCacheMatrix (z)) 
 
-#git
+#git SECTION
+#downsteam from a fork git
 #git clone https://github.com/aounihajar/ProgrammingAssignment2.
+
 #create a new repo in githib
 #git init
 #git remote add origin https://github.com/aounihajar/ProgrammingAssignment2_modified.git
@@ -53,3 +55,7 @@ cacheSolve(makeCacheMatrix (z))
 #git commit -m "R Programming, week 3 comment"
 #git push --set-upstream origin master
 
+#uploading a file for a second time
+#git add .
+#git commit -m "R Programming, week 3 comment"
+#git push --set-upstream origin master
