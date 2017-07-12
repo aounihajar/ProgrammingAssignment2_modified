@@ -1,8 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This library is to compute an inverse of a square matrix with the assumption 
+##that the determinant is non-zero. The way this library is designed is to cache 
+## the inverted matrix once computed. Hence, if the same matrix is required to compute its inverse
+## with a loop, then caching the results is going to improve the time to complete the program
 
-## Write a short comment describing this function
-
+## Create a list of four elements which cache the inverse
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
         set <- function (y) {
@@ -20,8 +21,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## Compute if the inverse is not computed, otherwise, call solve function to compute 
+## the inverse matrix
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         i <- x$getinverse ()
