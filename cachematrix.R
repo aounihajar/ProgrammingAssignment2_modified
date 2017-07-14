@@ -3,11 +3,11 @@
 ##  The package depends on caching the inverse matric and provides the cached 
 ##  results when required for the next call, e.g. in a loop.
 ##  Also, this package provides unit testing code and section for git comments 
-##  to push the source code to GitHub
+##  to push the source code to GitHub.
 
 
 ## Function 1: Create a list of four elements for maintain cached the matrix 
-## and inverse matrix
+## and inverse matrix.
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
         set <- function (y) {
@@ -26,7 +26,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Function 2: return the cached inverse matrix if already computed; otherwise 
-## compute and cache the inverse matrix
+## compute and cache the inverse matrix.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         i <- x$getinverse ()
