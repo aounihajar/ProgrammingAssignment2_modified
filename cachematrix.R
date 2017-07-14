@@ -1,13 +1,13 @@
 ## "cachematrix" is written in R language and provides functions for fast 
-##  computing inverse of square matric assumption the determinant is non-zero. 
-##  The package depends on caching the inverse matric and provides the cached 
+##  computing inverse of square matrices assumption the determinant is non-zero. 
+##  The package depends on caching the inverse matrices and provides the cached 
 ##  results when required for the next call, e.g. in a loop.
 ##  Also, this package provides unit testing code and section for git comments 
 ##  to push the source code to GitHub.
 
 
-## Function 1: Create a list of four elements for maintain cached the matrix 
-## and inverse matrix.
+## Function 1: Create a list of four elements for maintaining the cached matrix 
+## and its inverse.
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
         set <- function (y) {
@@ -25,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Function 2: return the cached inverse matrix if already computed; otherwise 
+## Function 2: return the cached inverse matrix if already computed; otherwise, 
 ## compute and cache the inverse matrix.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
