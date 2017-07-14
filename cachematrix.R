@@ -1,9 +1,13 @@
-## This library is to compute an inverse of a square matrix with the assumption 
-##that the determinant is non-zero. The way this library is designed is to cache 
-## the inverted matrix once computed. Hence, if the same matrix is required to compute its inverse
-## with a loop, then caching the results is going to improve the time to complete the program
+## "cachematrix" is written in R language and provides functions for fast 
+##  computing inverse of square matric assumption the determinant is non-zero. 
+##  The package depends on caching the inverse matric and provides the cached 
+##  results when required for the next call, e.g. in a loop.
+##  Also, this package provides unit testing code and section for git comments 
+##  to push the source code to GitHub
 
-## Create a list of four elements which cache the inverse
+
+## Function 1: Create a list of four elements for maintain cached the matrix 
+## and inverse matrix
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
         set <- function (y) {
@@ -12,17 +16,17 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         get <- function () x
         setinverse <- function (inverse) i <<- inverse
-
+        
         
         getinverse <- function () i
         list (set = set, get = get,
               setinverse = setinverse, getinverse = getinverse)
-
+        
 }
 
 
-## Compute if the inverse is not computed, otherwise, call solve function to compute 
-## the inverse matrix
+## Function 2: return the cached inverse matrix if already computed; otherwise 
+## compute and cache the inverse matrix
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         i <- x$getinverse ()
@@ -36,14 +40,21 @@ cacheSolve <- function(x, ...) {
         i
 }
 
-#testing a sample
+
+
+#UNIT TESTING
+#Testing without caching
 z <- matrix(c(4,2,7,6), 2, 2)
 solve (z)
 
 #testing with caching function
-cacheSolve(makeCacheMatrix (z)) 
+cacheSolve(makeCacheMatrix (z))  #compute inverse matrix
+cacheSolve(makeCacheMatrix (z))  #return cached inverse matrix
 
-#git SECTION
+
+
+
+#SECTION for GIT
 #downsteam from a fork git
 #git clone https://github.com/aounihajar/ProgrammingAssignment2.
 
